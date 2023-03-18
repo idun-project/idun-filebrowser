@@ -1,0 +1,24 @@
+post_install() {
+  cd /home/idun/.config
+  filebrowser config init --shell idunsh --branding.name="Idun File Browser"\
+   --branding.files="/etc/filebrowser" --address 0.0.0.0
+  filebrowser users add idun idun
+  chown idun filebrowser.db
+  systemctl daemon-reload
+  systemctl enable filebrowser
+  systemctl restart filebrowser
+}
+
+pre_remove() {
+  systemctl stop filebrowser
+  systemctl disable filebrowser
+  rm /home/idun/.config/filebrowser.db
+}
+
+pre_upgrade() {
+  pre_remove
+}
+
+post_upgrade() {
+  post_install
+}

@@ -1,0 +1,14 @@
+[Unit]
+Description=Idun File Browser
+After=network.target             
+Wants=network.target
+
+[Service]
+Type=simple
+Restart=on-failure
+ExecStart=/usr/local/bin/filebrowser -d /home/idun/.config/filebrowser.db -r /home/idun
+User=idun
+Group=idun
+
+[Install]
+WantedBy=multi-user.target

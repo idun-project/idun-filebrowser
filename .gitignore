@@ -29,3 +29,5 @@ yarn-error.log*
 *.sw*
 bin/
 build/
+pkg/
+*.pkg.tar.zst
