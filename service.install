@@ -1,6 +1,6 @@
 post_install() {
   cd /home/idun/.config
-  filebrowser config init --shell idunsh --branding.name="Idun File Browser"\
+  filebrowser config init --shell "idunsh -s -o exec" --branding.name="Idun File Browser"\
    --branding.files="/etc/filebrowser" --address 0.0.0.0
   filebrowser users add idun idun
   chown idun filebrowser.db

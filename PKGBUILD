@@ -1,6 +1,6 @@
 pkgname=idun-filebrowser
 pkgver=v2.23.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Idun web file manager"
 arch=("armv6h" "armv7h")
 url="https://filebrowser.org/"
