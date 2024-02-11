@@ -31,3 +31,4 @@ bin/
 build/
 pkg/
 *.pkg.tar.zst
+*.pkg.tar.zst.sig
